@@ -1,0 +1,220 @@
+.appointmentDetailsMain
+  font-family: 'Poppins'
+  font-size: 1rem
+  min-width: 375px
+  max-width: 1440px
+  margin: 2rem auto
+  padding-top: 1.5rem
+
+  // Left side panel, Customer and Merchant Info
+  .info-panel
+    padding: 0 2rem
+
+    .header
+      .greeting-title
+        font-weight: 700
+        font-size: 1.5rem
+        color: $color-dark-blue
+
+      .greeting-sub
+        font-size: 1rem
+        margin-top: .5rem        
+  
+  // Right side panel, Service info
+  .service-panel
+    padding: 0 2rem
+
+    .header
+      padding-top: 1rem
+      
+      .title
+        font-weight: 700
+        font-size: 1.5rem
+        color: $color-dark-blue
+
+      .actions
+        margin-top: 1rem
+        display: flex
+        justify-content: center
+
+        .btn
+          width: 50%
+
+          &:first-of-type
+            border-radius: 25px 0px 0px 25px            
+
+          &:nth-of-type(2)
+            border-radius: 0px 25px 25px 0px 
+
+      @media screen and (min-width: 768px)
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        .actions
+          margin: 0
+
+          .btn
+            width: 150px 
+
+  // General card styles  
+  .card
+    padding: 1.5rem
+    border-radius: .75rem
+    margin: 1.5rem 0
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+
+    // Custom styles for customer card
+    &__customer
+      background: $color-light-pink
+
+      @media screen and (min-width: 768px) and (max-width: 1023px)
+        display: flex
+        justify-content: space-between
+
+    // Custom styles for merchant card
+    &__merchant
+      .business-thumb
+        display: none
+        background: $color-light
+        width: 100px
+        height: 100px
+        overflow: hidden
+        border-radius: 50%
+
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover      
+
+      @media screen and (min-width: 768px)
+        display: flex
+        padding: 0
+
+        .header
+          width: 40%
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+          background: $color-light-pink
+          padding: 0 1.5rem
+          text-align: center
+
+        .business-thumb
+            display: block
+            
+        .business-name > .info__label
+          display: none
+
+        .body
+          padding: 1.5rem
+
+      @media screen and (min-width: 1024px)
+        flex-direction: column
+
+        .header
+          width: 100%
+          padding: 1.5rem
+
+    // Custom styles for appointment card
+    &__appointment
+      padding: 0
+
+      .header
+        padding: 1rem 1.5rem
+        background: $color-light-pink
+        display: flex
+        justify-content: space-between
+
+        @media screen and (max-width: 767px)
+          .lead
+            font-size: 1rem
+
+      .body
+        padding: 1rem 1.5rem
+
+        .service
+          margin-bottom: 1.5rem
+
+          &__time
+            margin-top: .5rem
+
+          .highlight
+            color: $color-primary
+            font-weight: 700
+            font-size: .85rem
+
+      .info
+        &__label
+          text-transform: lowercase
+        
+  .info
+    margin: 1rem 0
+
+    &__label
+      text-transform: uppercase
+      font-size: .65rem
+      letter-spacing: 1px
+      font-weight: 700
+      color: $color-primary
+
+    &__value
+      margin-top: .5rem
+
+      &.lead
+        font-weight: 700
+        color: $color-dark-blue
+        font-size: 1.5rem
+
+    &__flex
+      margin-top: .5rem
+
+      @media screen and (min-width: 700px)
+        display: flex
+        justify-content: space-between
+    
+    &__service
+
+  .operation-hours
+    display: none
+
+  .btn
+    border-radius: 25px
+    padding: .75rem 2rem
+    background: $color-light-pink
+    outline: none
+    border: none
+    cursor: pointer
+    color: $color-dark-blue
+    font-weight: 900
+    text-transform: lowercase
+    transition: .2s ease-in-out
+
+    &.active
+      background: $color-rose-pink
+      color: $color-white
+
+    &:hover    
+      background: $color-rose-pink
+      color: $color-white
+
+  .text-uppercase
+    text-transform: uppercase
+
+  .text-center
+    text-align: center
+
+  @media screen and (min-width: 1024px)
+    display: flex
+
+    .info-panel
+      width: 40%
+      padding: 0
+      
+      .header
+        display: none
+
+    .service-panel
+      flex: 1
